@@ -14,10 +14,7 @@ const globalForPrisma = globalThis as unknown as {
 const isBuildPhase = () => {
   return !!(
     process.env.NEXT_PHASE === 'phase-production-build' ||
-    process.env.BUILDING_FOR_VERCEL === '1' ||
-    process.env.CI === 'true' ||
-    process.env.VERCEL_ENV === 'production' ||
-    process.env.VERCEL === '1'
+    process.env.BUILDING_FOR_VERCEL === '1'
   )
 }
 
